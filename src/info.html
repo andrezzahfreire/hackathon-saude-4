@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Informações adicionais</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-success">
+
+    <div class="container">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h2 class="h4 text-gray-900 mb-4">Antes de completar o cadastro, 
+                                    precisamos de alguns dados básicos para entender o seu perfil 
+                                    e personalizar sua conta:</h2>
+
+                            </div>
+                            <form class="user">
+                                <!-- Data de Nascimento -->
+                                <div class="form-group">
+                                    <label for="dt_nasc">Data de Nascimento</label>
+                                    <input type="date" class="form-control " id="dt_nasc" required>
+                                </div>
+                    
+                                <!-- Gênero -->
+                                <div class="form-group">
+                                    <label for="genero">Gênero</label>
+                                    <select class="form-control" id="genero" required>
+                                        <option value="">Selecione</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="feminino">Feminino</option>
+                                        <option value="outro">Outro</option>
+                                        <option value="prefiro_nao_dizer">Prefiro não dizer</option>
+                                    </select>
+                                </div>
+                    
+                                <!-- Tipo Sanguíneo -->
+                                <div class="form-group">
+                                    <label for="tipo_sanguineo">Tipo Sanguíneo</label>
+                                    <select class="form-control" id="tipo_sanguineo" required>
+                                        <option value="">Selecione</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                    </select>
+                                </div>
+                    
+                                <!-- Altura e Peso -->
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label for="altura">Altura (m)</label>
+                                        <input type="text" class="form-control " id="altura" placeholder="Altura (m)">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="peso">Peso (kg)</label>
+                                        <input type="text" class="form-control " id="peso" placeholder="Peso (kg)">
+                                    </div>
+                                </div>
+                    
+                                <!-- Doenças ou Condições Crônicas Diagnosticadas -->
+                                <div class="form-group">
+                                    <label for="doencas">Doenças ou Condições Crônicas Diagnosticadas</label>
+                                    <select multiple class="form-control" id="doencas">
+                                        <option value="diabetes">Diabetes</option>
+                                        <option value="hipertensao">Hipertensão</option>
+                                        <option value="asma">Asma</option>
+                                        <option value="doencaCardiaca">Doença Cardíaca</option>
+                                        <option value="outrasDoencas">Outras (especificar)</option>
+                                    </select>
+                                </div>
+                    
+                                <!-- Alergias Conhecidas -->
+                                <div class="form-group">
+                                    <label for="alergias">Alergias Conhecidas</label>
+                                    <select multiple class="form-control " id="alergias">
+                                        <option value="medicamentos">Medicamentos (especificar)</option>
+                                        <option value="alimentos">Alimentos (especificar)</option>
+                                        <option value="poeira_polen">Poeira/Pólen</option>
+                                        <option value="outrasAlergias">Outros (especificar)</option>
+                                    </select>
+                                </div>
+                    
+                                <!-- Botões de Continuar e Cancelar -->
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <button type="submit" class="btn btn-success btn-user btn-block">
+                                            <a href="histo.html" >
+                                                Continuar
+                                            </a>
+                                            </button>
+                                        
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button type="reset" class="btn btn-light btn-user btn-block">Cancelar</button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
