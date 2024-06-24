@@ -1,5 +1,5 @@
 export class Vaccine {
-  pacienteID?: number;
+  userID?: number;
   nome?: string;
   dataNascimento?: string;
   sexo?: 'M' | 'F';
@@ -13,7 +13,7 @@ export class Vaccine {
   notasAdicionais?: string;
 
   constructor({
-    pacienteID,
+    userID,
     nome,
     dataNascimento,
     sexo,
@@ -26,7 +26,7 @@ export class Vaccine {
     profissionalSaude,
     notasAdicionais,
   }: Vaccine) {
-    this.pacienteID = pacienteID;
+    this.userID = userID;
     this.nome = nome;
     this.dataNascimento = dataNascimento;
     this.sexo = sexo;
