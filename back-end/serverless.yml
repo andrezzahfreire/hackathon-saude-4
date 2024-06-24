@@ -8,7 +8,9 @@ plugins:
   - serverless-plugin-typescript
 
 custom:
-  tableName: "employee-${sls:stage}"
+  userTableName: "user-${sls:stage}"
+  examTableName: "exam-${sls:stage}"
+  vaccineTableName: "vaccine-${sls:stage}"
   serverless-plugin-typescript:
     tsconfig: ./tsconfig.json
     outDir: ./dist
@@ -31,9 +33,13 @@ provider:
             - dynamodb:UpdateItem
             - dynamodb:DeleteItem
           Resource:
-            - Fn::GetAtt: [EmployeeTable, Arn]
+            - Fn::GetAtt: [UserTable, Arn]
+            - Fn::GetAtt: [ExamTable, Arn]
+            - Fn::GetAtt: [VaccineTable, Arn]
   environment:
-    EMPLOYEE_TABLE: ${self:custom.tableName}
+    USER_TABLE: ${self:custom.userTableName}
+    EXAM_TABLE: ${self:custom.examTableName}
+    VACCINE_TABLE: ${self:custom.vaccineTableName}
 
 functions:
   api:
@@ -43,14 +49,38 @@ functions:
 
 resources:
   Resources:
-    EmployeeTable:
+    UserTable:
       Type: AWS::DynamoDB::Table
       Properties:
         AttributeDefinitions:
-          - AttributeName: id
+          - AttributeName: userID
             AttributeType: S
         KeySchema:
-          - AttributeName: id
+          - AttributeName: userID
             KeyType: HASH
         BillingMode: PAY_PER_REQUEST
-        TableName: ${self:custom.tableName}
+        TableName: ${self:custom.userTableName}
+
+    ExamTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: examID
+            AttributeType: S
+        KeySchema:
+          - AttributeName: examID
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST
+        TableName: ${self:custom.examTableName}
+
+    VaccineTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: userID
+            AttributeType: S
+        KeySchema:
+          - AttributeName: userID
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST
+        TableName: ${self:custom.vaccineTableName}
